@@ -14,8 +14,9 @@
 body {
     color: #24292e;
     line-height: 1.5;
-    background-color: azure;
+    background-color: #f6f8fa;
 }
+
 a {
     text-decoration: none;
 }
@@ -124,13 +125,14 @@ button.bg-white:hover {
 }
 /* main content */
 main {
+    min-height: 100vh;
     display: flex;
 }
 /* left sidebar */
  
 aside.sidebar {
     position: relative;
-    width: 370px;
+    max-width: 370px;
     height: 100vh;
     padding: 1.3rem;
     background-color: #fff;
@@ -199,6 +201,11 @@ aside.sidebar {
     margin: 1rem 1rem 0 1rem;
     
 }
+.middle-container h2 {
+    font-size: 1.2rem;
+    color: #262626;
+    margin: 2.2rem 0 1.2rem 0;
+}
 /* header */
 .header {
     position: relative;
@@ -247,4 +254,187 @@ aside.sidebar {
     background-color: #eff3f6;
     border: var(--border);
     color: #24292e;
+}
+/* recent activity */
+.pull-request {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: var(--border);
+}
+.pull-request img {
+    width: 25px;
+}
+.pull-request .pull-request-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    
+}
+.pull-request .pull-request-container .bg-dark {
+    color: #000;
+}
+.pull-request .pull-request-container .bg-dark:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+ .bg-grey {
+    color: var(--primary-color);
+}
+ a.bg-grey:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+/* news container  */
+.news-container {
+    background-color: #fff;
+    border: var(--border);
+    padding: 2rem;
+}
+.news-container .large-text {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.news-container .explore-github-btn {
+    padding: 1rem 2rem;
+    border: var(--border);
+    margin-top: 1rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.underline_blue {
+    color: var(--secondary-color);
+}
+.underline_blue:hover {
+    text-decoration: underline;
+}
+/* footer */
+.footer.mt-4 {
+    margin-top: 4rem;
+    display: flex;
+     
+}
+.footer .links {
+    display: flex;
+    margin-left: 8rem;
+}
+.footer .links ul li {
+    padding-left: 3rem;
+}
+.footer .color-grey {
+    color: var(--primary-color);
+}
+.footer .fa-github:hover {
+    color: rgb(182, 174, 174);
+}
+
+/* right side-bar */
+.right-sidebar {
+   margin-top: 2rem;
+   padding-right: 1rem;
+    width: 500px;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.repository-container {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #939aa1;
+}
+ .repository-container {
+ border-bottom: 0;
+}
+.repository-container .repository-link {
+    color: #24292e;
+}
+
+.repository-container .repository-link:hover {
+    color: var(--secondary-color);
+}
+.repository-container .repository-description {
+    font-size: 0.9rem;
+}
+.repository-container .bg-yellow{
+   color: yellow;
+}
+.repository-container .bg-green {
+    color: green;
+}
+/* hamburger menu */
+.hamburger-menu {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+.hamburger-menu .hamburger-line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin: 0.4rem 0;
+}
+@media (max-width: 1000px){
+    .main-nav {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+    .main-nav .input-container {
+        display: none;
+    }
+    .main-nav  .nav-list {
+        display: none;
+    }
+    .main-nav .nav-icons li {
+        display: none;
+    }
+    .main-nav .nav-icons li.bell {
+        display: block;
+    }
+    .main-nav .hamburger-menu {
+        display: block;
+    }
+     
+    /* removing right sidebar  */
+    .right-sidebar {
+        display: none;
+    }
+    /* changing flex direction  */
+    main .sidebar {
+        display: none;
+    }
+    .footer .links {
+        
+        margin-left: 1rem;
+    }
+    .header .header-container .btn-container button {
+        display:  block;
+        margin: 1rem auto;
+    }
+}
+@media (max-width: 800px)
+{
+    .header .header-container {
+        margin: 2rem 1rem;
+        padding:2rem 1rem;
+    }
+    .header .header-container .btn-container button {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 500px) {
+    .header .header-container .btn-container button {
+        display:  block;
+        margin: 1rem auto;
+    }
+    .footer .links {
+        text-align: center;
+    }
+    .rm {
+        display: none;
+    }
+    .header .header-container .btn-container button {
+        padding: 0.8rem 2rem;
+    }
 }
